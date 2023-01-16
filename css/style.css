@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+	margin: 0;
+}
+
+body {
+	font-family: "Roboto", Arial;
+	scroll-behavior: smooth;
+	overflow: overlay;
+}
+
+header {
+	z-index: 9999;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 45px;
+	width: 100vw;
+	background-color: #fff;
+}
+
+header p {
+	font-size: 1.1em;
+	font-weight: 700;
+	color: black;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+nav a {
+	text-decoration: none;
+	color: grey;
+	font-weight: 500;
+	font-size: 0.7em;
+	padding: 14px 15px;
+	float: left;
+	text-align: center;
+}
+
+.dropdown {
+	overflow: hidden;
+	float: left;
+}
+
+.dropdown .dropBtn {
+	cursor: pointer;
+	font-size: 0.7em;
+	border: none;
+	outline: none;
+	color: gray;
+	padding: 14px 15px;
+	font-family: inherit;
+	background-color: inherit;
+}
+
+nav > *:hover {
+	background-color: #f4f4f4;
+	cursor: pointer;
+}
+
+.dropdown #about {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	margin: 0;
+}
+
+.dropdown #about a {
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-size: 0.7em;
+}
+
+nav .dropdown a:hover {
+	background-color: #7a7a78;
+	color: #fff;
+}
+
+.dropdown:hover #about {
+	display: block;
+}
+
+.slide-show {
+	position: relative;
+	max-width: auto;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	width: 100vw;
+}
+
+.slides {
+	display: flex;
+	transition: transform 300ms ease-in-out;
+}
+
+.slide-show div img {
+	width: 100vw;
+	max-height: 100vh;
+}
+
+.slide-show .fa-solid {
+	opacity: 50%;
+	border-radius: 50%;
+	padding: 8px;
+	position: absolute;
+	color: #fff;
+	cursor: pointer;
+	z-index: 100;
+	top: 50%;
+
+	border: 1px solid #fff;
+	transition: 0.3s;
+}
+
+.slide-show .fa-solid:hover {
+	opacity: 75%;
+}
+
+.prev {
+	left: 2rem;
+}
+
+.next {
+	right: 2rem;
+}
+
+.dots {
+	position: absolute;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	bottom: 5%;
+	opacity: 75%;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+/* WOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+/* VALUES */
+#our-values {
+	display: flex;
+	flex-direction: column;
+	margin: 80px 150px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#our-values > * {
+	box-sizing: border-box;
+}
+
+#our-values .column {
+	float: left;
+	max-width: 25%;
+	padding: 0 10px;
+	margin: 30px 0;
+}
+
+#our-values .row {
+	-ms-box-orient: horizontal;
+	display: flex;
+	justify-content: center;
+	margin: 0 -5px;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+#our-values .row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 900px) {
+	#our-values {
+		margin: 80px 0;
+	}
+
+	#our-values .row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+        flex-wrap: wrap;
+		margin: 0 -5px;
+        align-content: center;
+	}
+
+	.column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+	padding: 30px;
+	float: left;
+	color: #fff;
+}
+
+.card p {
+	font-size: 12px;
+}
+
+.card > h3,
+p {
+	margin-bottom: 20px;
+}
+
+.card > i {
+	margin-bottom: 15px;
+}
+
+#our-values #innovative {
+	background-color: #ea7c6f;
+	border: 3px solid #e15242;
+}
+
+#our-values #loyalty {
+	background-color: #6a996f;
+	border: 3px solid #628467;
+}
+
+#our-values #respect {
+	background-color: #5696c2;
+	border: 3px solid #4d86ae;
+}
+
+/* footer */
+footer {
+	padding: 20px;
+	background-color: #333333;
+	color: #fff;
+	justify-content: center;
+	text-align: center;
+}
+
+footer a {
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+footer p {
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* SCROLLER */
+::-webkit-scrollbar {
+	display: block;
+	width: 16px;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #00000000;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #00000000;
+	border: 5px solid transparent;
+	border-radius: 24px;
+	box-shadow: 4px 0px 0px 4px #00000040 inset;
+}
