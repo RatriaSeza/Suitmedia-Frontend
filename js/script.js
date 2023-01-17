@@ -3,7 +3,6 @@ var prev = document.querySelector('.prev');
 
 var numSlide = document.querySelectorAll(".slide").length;
 var numDots = document.querySelectorAll(".dot").length;
-console.log(numDots);
 
 let timoutID;
 
